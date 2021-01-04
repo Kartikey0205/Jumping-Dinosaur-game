@@ -3,13 +3,13 @@
     padding:0;
 }
 body{
-    background-color: red;
+    /* background-color: red; */
     overflow: hidden;
 }
 .gameContainer{
-    background-image: url(bg1.jpg);
-    background-repeat: no-repeat;
-    background-size: 100vw 100vh;
+    background: url("bg.jpg") no-repeat center center/cover;
+    /* background-image: url(bg.jpg); */
+    /* background-size: 100vw 100vh; */
     width: 100vw;
     height: 100vh;
 }
@@ -18,50 +18,59 @@ body{
     background-image: url(dino.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 233px;
-    height: 114px;
+    width: 277px;
+    height: 138px;
     position: absolute;
-    bottom:0;
-    left: 52px;
+    bottom: 4px;
+    left: 59px;
 }
 
 .obstacle{
-    width: 166px;
-    height: 113px;
+    width: 189px;
+    height: 126px;
     background-image: url(dragon.png);
+    background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    bottom: 0;
-    left: 44vw;
+    bottom: 4px;
+    left: 60vw;
 }
 
- .animateDino{
-    animation: dino 0.6s linear;
-}
-
-.obstacleAni{
-    animation: obstacleAni 5s linear infinite;
+.disturbance{
+    /* animation: disturbance 6s linear infinite; */
+    animation: disturbance 6s cubic-bezier(1, 2.36, 0.4, -1.57) infinite;
 }
 
 .gameOver{
-    position: relative;
-    top:63px;
-    font-size: 53px;
-    text-align: center; 
+    top: 12px;
+    font-size: 39px;
+    text-align: center;
     font-family: 'Ubuntu', sans-serif;
+    color: #f70404;
+    text-shadow: -2px 3px 2px rgb(169 206 25);
 }
 
 #scoreCont{
+    display: block;
+    margin: 80px auto;
+    width: fit-content;
     font-size: 25px;
-    color: #54212f;
+    color: #000000;
     font-weight: bold;
-    position: absolute;
-    right: 45px;
-    top: 31px;
+    /* position: absolute; */
+    /* right: 45px; */
+    /* top: 48px; */
     border: 2px solid black;
-    padding: 10px;
+    /* border-radius: 39rem; */
+    padding: 14px;
     font-family: 'Ubuntu', sans-serif;
-    border-radius: 10px;
+    border-radius: 17px;
+    text-shadow: -2px 1px 1px #e00d0d;
+    box-shadow: -4px -3px 1px #008800;
+}
+
+ .animateDinoup{
+    animation: dino 0.6s linear;
 }
 
 @keyframes dino{
@@ -72,11 +81,25 @@ body{
         bottom: 422px;
     }
     100%{
-        bottom: 0; 
+        bottom: 0;
     }
 }
+.animateDinoright{
+    animation: dino1 0.6s alternate-reverse;
 
-@keyframes obstacleAni{
+}
+@keyframes dino1{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 422px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+@keyframes disturbance{
     0%{
         left: 100vw;
     }
