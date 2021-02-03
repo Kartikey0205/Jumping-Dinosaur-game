@@ -4,7 +4,7 @@
 }
 body{
     /* background-color: red; */
-    overflow: hidden;
+    overflow: hidden; /*body ki extra hrkt rokne k liye h*/  
 }
 .gameContainer{
     background: url("bg.jpg") no-repeat center center/cover;
@@ -18,8 +18,8 @@ body{
     background-image: url(dino.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 277px;
-    height: 138px;
+    width: 242px;
+    height: 122px;
     position: absolute;
     bottom: 4px;
     left: 59px;
@@ -36,17 +36,15 @@ body{
     left: 60vw;
 }
 
-.disturbance{
-    /* animation: disturbance 6s linear infinite; */
-    animation: disturbance 6s cubic-bezier(1, 2.36, 0.4, -1.57) infinite;
-}
+
 
 .gameOver{
+    visibility: hidden;
     top: 12px;
     font-size: 39px;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
-    color: #f70404;
+    color: #21f3cc;
     text-shadow: -2px 3px 2px rgb(169 206 25);
 }
 
@@ -69,6 +67,8 @@ body{
     box-shadow: -4px -3px 1px #008800;
 }
 
+
+/* player jump kre */
  .animateDinoup{
     animation: dino 0.6s linear;
 }
@@ -84,11 +84,11 @@ body{
         bottom: 0;
     }
 }
-.animateDinoright{
+/* .animateDinoright{
     animation: dino1 0.6s alternate-reverse;
 
-}
-@keyframes dino1{
+} */
+/* @keyframes dino1{
     0%{
         bottom: 0;
     }
@@ -98,6 +98,10 @@ body{
     100%{
         bottom: 0;
     }
+} */
+.disturbance{
+    /* animation: disturbance 6s linear infinite; */
+    animation: disturbance 6s cubic-bezier(0, 0, 0.4,-0.45) infinite;
 }
 @keyframes disturbance{
     0%{
